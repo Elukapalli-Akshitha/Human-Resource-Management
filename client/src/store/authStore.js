@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import  { jwtDecode  as jwt_decode }  from 'jwt-decode';
+import jwt_decode from 'jwt-decode';
 
 const useAuthStore = create((set) => ({
   user: null,

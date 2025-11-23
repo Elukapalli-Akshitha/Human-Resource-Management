@@ -1,6 +1,7 @@
-import { useEffect } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import AppRouter from './Routes/AppRouter';
 import useAuthStore from './store/authStore';
+import { useEffect } from 'react';
 
 const App = () => {
   const initAuth = useAuthStore((state) => state.initAuth);
@@ -9,7 +10,11 @@ const App = () => {
     initAuth();
   }, [initAuth]);
 
-  return <AppRouter />;
+  return (
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
+  );
 };
 
 export default App;
